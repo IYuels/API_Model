@@ -204,7 +204,7 @@ async def startup_event():
         max_length = checkpoint['max_length']
         
         # Load fastText embeddings
-        fasttext_path = os.environ.get("FASTTEXT_PATH", "model/fasttext_model2.bin")
+        fasttext_path = os.environ.get("FASTTEXT_PATH", "model/compressed_fasttext_embeddings.npz")
         fasttext_model = fasttext.load_model(fasttext_path)
         
     except Exception as e:
